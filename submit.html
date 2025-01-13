@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Review</title>
+    <link href="../styles/output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation (reusing from index.html) -->
+    <nav class="bg-blue-600 text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="font-bold text-xl">CourseReview</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="/courses" class="hover:text-blue-200">Courses</a>
+                    <a href="/reviews" class="hover:text-blue-200">Reviews</a>
+                    <a href="/dashboard" class="hover:text-blue-200">Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-4xl mx-auto px-4 py-8">
+        <!-- Tabs -->
+        <div class="border-b border-gray-200 mb-8">
+            <div class="flex space-x-8">
+                <button class="border-b-2 border-blue-500 py-4 px-1 text-sm font-medium text-blue-600">
+                    Course Review
+                </button>
+                <button class="border-b-2 border-transparent py-4 px-1 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                    Instructor Review
+                </button>
+            </div>
+        </div>
+
+        <!-- Course Review Section -->
+        <div id="courseReview" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Course Review</h2>
+            <form class="space-y-6">
+                <div class="grid grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Course Name</label>
+                        <select class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                            <option>Select a course</option>
+                            <option>Introduction to Computer Science</option>
+                            <option>Data Structures and Algorithms</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Semester</label>
+                        <select class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                            <option>Fall 2024</option>
+                            <option>Spring 2024</option>
+                            <option>Summer 2024</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-3 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Overall Rating</label>
+                        <div class="flex space-x-2 mt-2">
+                            <button type="button" class="text-2xl text-yellow-400">★</button>
+                            <button type="button" class="text-2xl text-yellow-400">★</button>
+                            <button type="button" class="text-2xl text-yellow-400">★</button>
+                            <button type="button" class="text-2xl text-gray-300">★</button>
+                            <button type="button" class="text-2xl text-gray-300">★</button>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Difficulty</label>
+                        <select class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                            <option>Easy</option>
+                            <option>Moderate</option>
+                            <option>Challenging</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Workload (hrs/week)</label>
+                        <input type="number" min="0" max="50" 
+                               class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Review Title</label>
+                    <input type="text" 
+                           class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                           placeholder="Brief summary of your experience">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Detailed Review</label>
+                    <textarea rows="4" 
+                              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                              placeholder="Share your experience, what you learned, and any advice for future students"></textarea>
+                </div>
+            </form>
+        </div>
+
+        <!-- Instructor Review Section -->
+        <div id="instructorReview" class="mb-12 hidden">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Instructor Review</h2>
+            <form class="space-y-6">
+                <div class="grid grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Instructor Name</label>
+                        <select class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                            <option>Select an instructor</option>
+                            <option>Dr. John Smith</option>
+                            <option>Prof. Jane Doe</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Course Taught</label>
+                        <select class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                            <option>Select a course</option>
+                            <option>Introduction to Computer Science</option>
+                            <option>Data Structures and Algorithms</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-3 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Teaching Quality</label>
+                        <div class="flex space-x-2 mt-2">
+                            <button type="button" class="text-2xl text-yellow-400">★</button>
+                            <button type="button" class="text-2xl text-yellow-400">★</button>
+                            <button type="button" class="text-2xl text-yellow-400">★</button>
+                            <button type="button" class="text-2xl text-gray-300">★</button>
+                            <button type="button" class="text-2xl text-gray-300">★</button>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Approachability</label>
+                        <div class="flex space-x-2 mt-2">
+                            <button type="button" class="text-2xl text-yellow-400">★</button>
+                            <button type="button" class="text-2xl text-yellow-400">★</button>
+                            <button type="button" class="text-2xl text-yellow-400">★</button>
+                            <button type="button" class="text-2xl text-gray-300">★</button>
+                            <button type="button" class="text-2xl text-gray-300">★</button>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Expertise</label>
+                        <div class="flex space-x-2 mt-2">
+                            <button type="button" class="text-2xl text-yellow-400">★</button>
+                            <button type="button" class="text-2xl text-yellow-400">★</button>
+                            <button type="button" class="text-2xl text-yellow-400">★</button>
+                            <button type="button" class="text-2xl text-gray-300">★</button>
+                            <button type="button" class="text-2xl text-gray-300">★</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Review Title</label>
+                    <input type="text" 
+                           class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                           placeholder="Brief summary of your experience with the instructor">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Detailed Review</label>
+                    <textarea rows="4" 
+                              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                              placeholder="Share your experience with the instructor's teaching style, communication, and effectiveness"></textarea>
+                </div>
+            </form>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" 
+                class="w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
+            Submit Review
+        </button>
+    </div>
+
+    <!-- Simple JavaScript for tab switching -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('button');
+            const courseSection = document.getElementById('courseReview');
+            const instructorSection = document.getElementById('instructorReview');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Reset all tabs
+                    tabs.forEach(t => {
+                        t.classList.remove('border-blue-500', 'text-blue-600');
+                        t.classList.add('border-transparent', 'text-gray-500');
+                    });
+
+                    // Highlight clicked tab
+                    tab.classList.remove('border-transparent', 'text-gray-500');
+                    tab.classList.add('border-blue-500', 'text-blue-600');
+
+                    // Show/hide appropriate section
+                    if (tab.textContent.trim() === 'Course Review') {
+                        courseSection.classList.remove('hidden');
+                        instructorSection.classList.add('hidden');
+                    } else {
+                        courseSection.classList.add('hidden');
+                        instructorSection.classList.remove('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructor Dashboard - Coursia</title>
+    <link href="./styles/input.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Header Section -->
+    <header class="bg-white shadow-md py-8 relative">
+        <!-- Logo -->
+        <div class="absolute left-8 top-1/2 transform -translate-y-1/2">
+            <img src="../images/p_logo.png" alt="Logo" class="h-16 w-auto object-contain">
+        </div>
+        
+        <!-- Title -->
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold text-teal-600">Instructor Dashboard</h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto my-16 px-4">
+        <div class="max-w-2xl mx-auto">
+            <!-- Batch Reviews Card -->
+            <a href="/batch-reviews.html" 
+               class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-all hover:scale-105 hover:shadow-xl cursor-pointer block">
+                <div class="p-12 text-center">
+                    <svg class="w-20 h-20 mx-auto mb-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+                    </svg>
+                    <h2 class="text-3xl font-bold text-teal-600 mb-4">Batch Reviews</h2>
+                    <p class="text-gray-600">View and manage reviews from your students</p>
+                </div>
+            </a>
+        </div>
+    </main>
+</body>
+</html> 
