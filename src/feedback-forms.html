@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Forms - Coursia</title>
+    <link href="./styles/input.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Header Section -->
+    <header class="bg-white shadow-md py-8 relative">
+        <!-- Logo -->
+        <div class="absolute left-8 top-1/2 transform -translate-y-1/2">
+            <img src="../images/c_logo.png" alt="Coursia Logo" class="h-16 w-auto object-contain">
+        </div>
+        
+        <!-- Back Button -->
+        <a href="./index.html" class="absolute left-32 top-1/2 transform -translate-y-1/2 text-teal-600 hover:text-teal-700">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+        </a>
+
+        <!-- Title -->
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold text-teal-600">Feedback Forms</h1>
+        </div>
+    </header>
+
+    <main class="container mx-auto my-16 px-4">
+        <div class="max-w-4xl mx-auto space-y-8">
+            <!-- Search Section -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-xl font-semibold text-gray-900 mb-6">Find Course Feedback Forms</h2>
+                <div class="space-y-4">
+                    <div class="flex gap-4">
+                        <input type="text" 
+                               placeholder="Search by course name" 
+                               class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:outline-none">
+                        <input type="text" 
+                               placeholder="Course code" 
+                               class="w-32 px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:outline-none">
+                        <button class="bg-teal-600 text-white px-6 py-2 rounded-md hover:bg-teal-700 transition-colors">
+                            Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-xl font-semibold text-gray-900 mb-6">Available Feedback Forms</h2>
+                <div class="space-y-4">
+                    <!-- Course Card -->
+                    <div class="border border-gray-200 rounded-lg p-4 hover:border-teal-500 transition-colors">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-medium text-gray-900">Machine Learning (CS401)</h3>
+                                <p class="text-sm text-gray-600">Prof. Sarah Johnson</p>
+                            </div>
+                            <a href="#" class="bg-teal-600 text-white px-4 py-1 rounded-md text-sm hover:bg-teal-700 transition-colors">
+                                Open Form
+                            </a>
+                        </div>
+                        <div class="mt-2 text-sm text-gray-500">
+                            <p>Mid-semester feedback form</p>
+                            <p class="text-xs mt-1">Due: December 15, 2024</p>
+                        </div>
+                    </div>
+
+                    <!-- More course cards... -->
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html> 
